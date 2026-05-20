@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="authModal" class="login-overlay">
+    <div class="login-box">
+        
+        <div id="loginFormSection">
+            <h2>Budget Tracker Login</h2>
+            <div class="auth-form-group">
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button onclick="handleLogin()">Login</button>
+                <p id="loginError" style="color: red; display: none;">Invalid username or password!</p>
+                
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ccc;">
+                <p style="margin-bottom: 5px; font-size: 14px; color: #666;">Don't have an account?</p>
+                <button class="secondary-btn" onclick="toggleAuthMode(true)">Create New Account</button>
+            </div>
+        </div>
+
+        <div id="signupFormSection" style="display: none;">
+            <h2>Create an Account</h2>
+            <div class="auth-form-group">
+                <input type="text" id="signupUsername" placeholder="Choose Username">
+                <input type="password" id="signupPassword" placeholder="Choose Password">
+                <button onclick="handleSignUp()">Sign Up</button>
+                <p id="signupError" style="color: red; display: none;"></p>
+                
+                <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ccc;">
+                <p style="margin-bottom: 5px; font-size: 14px; color: #666;">Already have an account?</p>
+                <button class="secondary-btn" onclick="toggleAuthMode(false)">Back to Login</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="mainApp" style="display: none;">
+
+    <h1>Personal Budget Tracker</h1>
+
+    <div class="form">
+        <input type="number" id="amount" placeholder="Enter Amount">
+        <input type="text" id="description" placeholder="Description">
+
+        <select id="category">
+            <option>Food</option>
+            <option>Transportation</option>
+            <option>School</option>
+            <option>Entertainment</option>
+            <option>Savings</option>
+            <option>Others</option>
+        </select>
+
+        <div class="buttons">
+            <button onclick="addTransaction('Allowance')">Add Allowance</button>
+            <button onclick="addTransaction('Expense')">Add Expense</button>
+        </div>
+    </div>
+
+    <h2 id="balance">Balance: ₱0.00</h2>
+
+    <div class="chart-box">
+        <h3>Spending Breakdown</h3>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+    <div class="goal-box">
+        <h3>Budget Goal Tracker</h3>
+        <input type="number" id="goalAmount" placeholder="Set your goal (₱)">
+        <button onclick="setGoal()">Set Goal</button>
+        <p id="goalText">No goal set yet.</p>
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

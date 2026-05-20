@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    transition: background 0.2s;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background: #f8f9fa;
+}
+
+#balance {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.goal-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #eef2ff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.goal-box input {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: #4caf50;
+    transition: width 0.4s ease;
+}
+
+.chart-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+canvas {
+    max-width: 320px;
+    margin: auto;
+    display: block;
+}
+
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.auth-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.login-box input {
+    width: 100%;
+}
+
+.secondary-btn {
+    background: #6c757d !important;
+    color: white !important;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.secondary-btn:hover {
+    background: #5a6268 !important;
+}
